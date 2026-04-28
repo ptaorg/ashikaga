@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>公用パソコン使用とPTA関連文書の行政情報性｜論点整理資料</title>
+  <meta name="description" content="公用パソコンの私的利用禁止規程を前提に、PTA関連文書の行政情報性・公務関連性・検索義務を整理するための論点整理資料です。" />
+  <style>
+    :root{
+      --navy:#0b2f55;
+      --navy2:#173f6d;
+      --blue:#1d5f99;
+      --sky:#eaf4ff;
+      --light:#f4f7fb;
+      --line:#d8e2ee;
+      --text:#1f2937;
+      --muted:#667085;
+      --red:#b42318;
+      --green:#087443;
+      --yellow:#8a5a00;
+      --white:#fff;
+      --shadow:0 10px 30px rgba(11,47,85,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#f7faff 0%,#eef4fb 100%);
+      line-height:1.8;
+    }
+    .wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+    header{
+      background:
+        radial-gradient(circle at 20% 10%,rgba(255,255,255,.16),transparent 30%),
+        linear-gradient(135deg,var(--navy),var(--navy2));
+      color:#fff;
+      padding:44px 20px 40px;
+    }
+    .eyebrow{
+      display:inline-block;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:999px;
+      padding:4px 12px;
+      font-size:13px;
+      letter-spacing:.04em;
+      margin-bottom:14px;
+      background:rgba(255,255,255,.08);
+    }
+    h1{
+      margin:0;
+      font-size:clamp(28px,4vw,44px);
+      line-height:1.28;
+      letter-spacing:.02em;
+    }
+    .lead{
+      max-width:920px;
+      margin:18px 0 0;
+      font-size:18px;
+      color:#e7eef7;
+    }
+    nav{
+      background:#fff;
+      border-bottom:1px solid var(--line);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    nav .wrap{
+      display:flex;
+      gap:10px;
+      overflow:auto;
+      padding-top:10px;
+      padding-bottom:10px;
+    }
+    nav a{
+      white-space:nowrap;
+      text-decoration:none;
+      color:#17324d;
+      background:#f2f6fb;
+      border:1px solid var(--line);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+    }
+    main{padding:30px 0 70px}
+    section{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      margin:22px 0;
+      padding:28px;
+    }
+    h2{
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:26px;
+      line-height:1.35;
+      border-left:6px solid var(--blue);
+      padding-left:12px;
+    }
+    h3{
+      margin:24px 0 8px;
+      color:#17324d;
+      font-size:20px;
+    }
+    p{margin:0 0 12px}
+    ul,ol{margin:8px 0 0 1.2em;padding:0}
+    li{margin:6px 0}
+    .note{
+      background:#f6f9fd;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px 16px;
+      color:#334155;
+    }
+    .caution{
+      background:#fff7ed;
+      border:1px solid #fed7aa;
+      border-radius:14px;
+      padding:14px 16px;
+      color:#5f370e;
+    }
+    .quote{
+      border-left:5px solid var(--blue);
+      background:#f6f9fd;
+      padding:16px 18px;
+      border-radius:12px;
+      font-weight:700;
+    }
+    .grid{display:grid;gap:18px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      background:#fff;
+      padding:18px;
+    }
+    .card strong{color:var(--navy)}
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      border-radius:999px;
+      padding:3px 9px;
+      margin-bottom:8px;
+      background:#e8f1fb;
+      color:#17446f;
+    }
+    .tag.red{background:#fee4e2;color:#912018}
+    .tag.green{background:#dcfae6;color:#05603a}
+    .tag.yellow{background:#fef0c7;color:#7a4a00}
+    .tag.gray{background:#eef2f6;color:#344054}
+    .flow{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+    .box{
+      border-radius:16px;
+      padding:18px;
+      border:2px solid var(--line);
+      background:#fff;
+    }
+    .box.center{text-align:center}
+    .box.key{border-color:#9cc4ee;background:#f1f7ff}
+    .box.red{border-color:#fda29b;background:#fff3f1}
+    .box.green{border-color:#75e0a7;background:#ecfdf3}
+    .box.yellow{border-color:#fdb022;background:#fff9e8}
+    .arrow{
+      text-align:center;
+      color:var(--muted);
+      font-size:24px;
+      line-height:1;
+      margin:-2px 0;
+      font-weight:900;
+    }
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .logic-title{
+      font-weight:900;
+      color:var(--navy);
+      font-size:18px;
+      margin-bottom:8px;
+    }
+    .diagram{
+      display:grid;
+      grid-template-columns:1fr 80px 1fr;
+      gap:12px;
+      align-items:center;
+      margin-top:14px;
+    }
+    .diagram .mid{
+      text-align:center;
+      font-size:36px;
+      color:#98a2b3;
+      font-weight:900;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:12px;
+    }
+    .pill{
+      border:1px solid var(--line);
+      background:#f8fbff;
+      color:#17324d;
+      border-radius:999px;
+      padding:7px 12px;
+      font-size:14px;
+      font-weight:700;
+    }
+    .matrix{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+    .matrix .mcell{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      background:#fff;
+      min-height:144px;
+    }
+    .mcell h3{margin:0 0 8px;font-size:18px}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:12px;
+      background:#fff;
+      overflow:hidden;
+      border-radius:12px;
+    }
+    th,td{
+      border:1px solid var(--line);
+      padding:12px 14px;
+      vertical-align:top;
+      text-align:left;
+    }
+    th{
+      background:#eef5fc;
+      color:#17324d;
+      width:28%;
+    }
+    .timeline{position:relative;padding-left:26px}
+    .timeline:before{
+      content:"";
+      position:absolute;
+      left:8px;
+      top:6px;
+      bottom:6px;
+      width:3px;
+      background:#bfd4ea;
+      border-radius:999px;
+    }
+    .tl{position:relative;margin:0 0 18px;padding:0 0 0 12px}
+    .tl:before{
+      content:"";
+      position:absolute;
+      left:-24px;
+      top:8px;
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      background:var(--blue);
+      border:3px solid #fff;
+      box-shadow:0 0 0 2px #bfd4ea;
+    }
+    .tl b{color:var(--navy)}
+    .footer{
+      color:#667085;
+      font-size:13px;
+      text-align:center;
+      margin-top:28px;
+    }
+    .small{font-size:13px;color:#667085}
+    .print-button{
+      display:inline-block;
+      margin-top:14px;
+      border:none;
+      border-radius:999px;
+      padding:9px 14px;
+      background:#fff;
+      color:#17324d;
+      font-weight:800;
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.45);
+    }
+    @media(max-width:820px){
+      section{padding:20px}
+      .grid.two,.grid.three,.split,.diagram,.matrix{grid-template-columns:1fr}
+      .diagram .mid{transform:rotate(90deg);font-size:28px}
+      h2{font-size:22px}
+      header{padding:32px 16px}
+      nav{position:static}
+    }
+    @media print{
+      body{background:#fff}
+      nav,.print-button{display:none}
+      header{background:#fff;color:#111;border-bottom:2px solid #ddd}
+      .lead{color:#333}
+      section{box-shadow:none;break-inside:avoid}
+      .wrap{max-width:none}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">論点整理資料</div>
+    <h1>公用パソコン使用と<br>PTA関連文書の行政情報性</h1>
+    <p class="lead">
+      公用パソコンの私的利用禁止規程を前提に、教職員が公用パソコンでPTA会計関連書類等を作成・編集・保存していた場合の論理関係を整理した資料です。
+    </p>
+    <button class="print-button" onclick="window.print()">印刷・PDF保存</button>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#summary">結論</a>
+    <a href="#logic">二択ロジック</a>
+    <a href="#diagram">構造図</a>
+    <a href="#rebuttal">反論構造</a>
+    <a href="#factors">判断要素</a>
+    <a href="#timeline">時系列</a>
+    <a href="#issues">検討論点</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="summary">
+    <h2>1. 結論</h2>
+    <div class="quote">
+      公用パソコンの私的利用が禁止されている場合、公用パソコンで作成・保存・編集されたPTA関連文書について、単に「PTAの文書である」という理由だけで行政情報性を否定することはできません。
+    </div>
+    <p class="small">
+      ※本資料は、現時点で確認できた情報に基づく論点整理です。最終的な評価は、開示文書、録音反訳、条例上の「行政情報」定義、実際の作成・保存・管理状況により判断されます。
+    </p>
+  </section>
+
+  <section id="logic">
+    <h2>2. 二択ロジック</h2>
+    <div class="flow">
+      <div class="box key center">
+        <div class="logic-title">前提</div>
+        市職員は、休憩時間・勤務時間終了後を含め、公用パソコンを私用目的で使用することを禁止されている。
+      </div>
+      <div class="arrow">↓</div>
+      <div class="box center">
+        <div class="logic-title">問題となる事実</div>
+        教職員が、公用パソコンを使用してPTA会計関連書類等を作成・編集・保存していた可能性がある。
+      </div>
+      <div class="arrow">↓</div>
+      <div class="split">
+        <div class="box red">
+          <span class="tag red">整理 A</span>
+          <div class="logic-title">私人活動として説明する場合</div>
+          <p>公用パソコンを私用目的で使用したことになり、情報セキュリティ規程・公物管理上の問題が生じます。</p>
+        </div>
+        <div class="box green">
+          <span class="tag green">整理 B</span>
+          <div class="logic-title">職務関連作業として説明する場合</div>
+          <p>公務関連性・組織共用性が強まり、行政情報として特定・検索・開示判断の対象となる可能性が高まります。</p>
+        </div>
+      </div>
+      <div class="arrow">↓</div>
+      <div class="box key center">
+        <div class="logic-title">帰結</div>
+        「PTA文書である」という形式だけでは足りず、作成主体・使用機器・保存場所・共有実態・業務関連性を確認する必要があります。
+      </div>
+    </div>
+  </section>
+
+  <section id="diagram">
+    <h2>3. 構造図で見る争点</h2>
+    <div class="diagram">
+      <div class="card">
+        <span class="tag gray">行政側が言いやすい整理</span>
+        <h3>PTA文書だから行政情報ではない</h3>
+        <p>文書の名目・団体名だけを見て、行政情報性を否定する整理。</p>
+      </div>
+      <div class="mid">⇄</div>
+      <div class="card">
+        <span class="tag green">本資料の整理</span>
+        <h3>公用パソコン使用の実態を見なければ判断できない</h3>
+        <p>行政資源を用いた作成・保存・管理があれば、実質判断が必要になる整理。</p>
+      </div>
+    </div>
+
+    <div class="matrix">
+      <div class="mcell">
+        <span class="tag red">A 私人活動説</span>
+        <h3>規程違反の問題</h3>
+        <p>公用パソコンの私的利用禁止と矛盾します。私人活動だったと説明するほど、公物の目的外使用・情報管理上の問題が前面に出ます。</p>
+      </div>
+      <div class="mcell">
+        <span class="tag green">B 職務関連説</span>
+        <h3>行政情報性の問題</h3>
+        <p>学校職員が公用環境で作成・保存・共有していたなら、行政情報として検索・特定・開示判断を行う必要性が高まります。</p>
+      </div>
+      <div class="mcell">
+        <span class="tag yellow">行政側の逃げ道</span>
+        <h3>「PTAだから対象外」</h3>
+        <p>しかし、この説明は使用機器・保存場所・共有状況を検討していない場合、不十分です。</p>
+      </div>
+      <div class="mcell">
+        <span class="tag">必要な判断</span>
+        <h3>形式ではなく実態</h3>
+        <p>名称ではなく、作成・取得・保有・組織共用・業務関連性を具体的に見る必要があります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="rebuttal">
+    <h2>4. 教育委員会側説明への反論構造</h2>
+    <div class="grid three">
+      <div class="card">
+        <span class="tag gray">想定される説明</span>
+        <p><strong>「PTAの会計文書であり、教職員はPTA会員として作成した」</strong></p>
+      </div>
+      <div class="card">
+        <span class="tag yellow">問題点</span>
+        <p><strong>公用パソコンの私的利用は禁止されています。</strong> そのため、私人活動として説明するほど、規程違反の疑いが強まります。</p>
+      </div>
+      <div class="card">
+        <span class="tag green">反論</span>
+        <p><strong>公用パソコンを用いた以上、使用実態・保存実態・ログ等を確認したうえで行政情報性を判断すべきです。</strong></p>
+      </div>
+    </div>
+
+    <h3>中心となる主張</h3>
+    <div class="quote">
+      実施機関は、当該文書がPTA関連文書であることを理由に行政情報性を否定するが、公用パソコンの私的利用が禁止されている以上、公用パソコンを用いて作成・保存・管理された文書については、公務関連性、組織共用性及び管理実態を慎重に判断すべきであり、形式的に私人活動文書と整理することはできない。
+    </div>
+  </section>
+
+  <section id="factors">
+    <h2>5. 行政情報性を判断するための確認要素</h2>
+    <table>
+      <tr>
+        <th>作成主体</th>
+        <td>誰が作成したか。教頭、教務主任、事務職員など、学校職員が職場で作成していたか。</td>
+      </tr>
+      <tr>
+        <th>使用機器</th>
+        <td>公用パソコン、公用ネットワーク、公用可搬記憶媒体、公用プリンタを使用していたか。</td>
+      </tr>
+      <tr>
+        <th>作成場所・時間</th>
+        <td>学校内で、勤務時間中又は勤務時間に近接する時間帯に作成・編集されていたか。</td>
+      </tr>
+      <tr>
+        <th>保存場所</th>
+        <td>共有フォルダ、校務用端末、学校管理下の媒体、校内保管場所に保存されていたか。</td>
+      </tr>
+      <tr>
+        <th>組織共用性</th>
+        <td>複数の教職員が閲覧・編集・引継ぎ・利用していたか。</td>
+      </tr>
+      <tr>
+        <th>業務関連性</th>
+        <td>学校徴収金、保護者対応、配布物、児童生徒名簿、教職員の職務分掌等と関連していたか。</td>
+      </tr>
+      <tr>
+        <th>電磁的記録</th>
+        <td>アクセスログ、保存履歴、印刷履歴、USB接続履歴、ファイル更新履歴等が確認できるか。</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="timeline">
+    <h2>6. 現在の時系列</h2>
+    <div class="timeline">
+      <div class="tl">
+        <b>足利市市長部局から部分開示</b><br>
+        情報セキュリティポリシー等のうち、公用パソコン使用に関する部分開示を受けた。
+      </div>
+      <div class="tl">
+        <b>確認できた内容</b><br>
+        休憩時間・勤務時間終了後を含め、公用パソコンの私用目的使用は禁止されていることを確認。
+      </div>
+      <div class="tl">
+        <b>教育委員会への開示請求</b><br>
+        東山小学校における公用パソコン使用実態及びアクセスログ等について、開示請求中。
+      </div>
+      <div class="tl">
+        <b>60日延長</b><br>
+        教育委員会から期間延長通知が出され、5月11日の反論書提出期限には開示結果が間に合わない状況。
+      </div>
+      <div class="tl">
+        <b>対応方針</b><br>
+        まず現時点の資料で反論書を提出し、追加開示資料、録音反訳、ログ関連資料等は後日追加提出する。
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. 追加で確認・提出すべき資料</h2>
+    <div class="grid two">
+      <div class="card">
+        <span class="tag green">優先度 高</span>
+        <ul>
+          <li>情報セキュリティポリシーの開示部分</li>
+          <li>開示時説明の録音反訳書</li>
+          <li>教育委員会の60日延長通知書</li>
+          <li>公用パソコンのアクセスログ・保存履歴</li>
+          <li>共有フォルダ・印刷履歴・USB接続履歴</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag yellow">補強資料</span>
+        <ul>
+          <li>教頭・事務職員等の職務分掌</li>
+          <li>PTA会計資料の作成・引継ぎ実態</li>
+          <li>学校内保管の有無</li>
+          <li>PTA会計処理に関する学校側説明</li>
+          <li>過去の開示決定・不開示理由通知</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="issues">
+    <h2>8. 本件で検討すべき論点</h2>
+    <ol>
+      <li>「私的利用なら規程違反、職務関連なら行政情報」という二択ロジックに無理がないか。</li>
+      <li>足利市条例上の「行政情報」又は「公文書」定義に照らして、どの要素を重視すべきか。</li>
+      <li>5月11日の反論書に、後日追加提出予定であることをどの程度明記すべきか。</li>
+      <li>ログ開示が遅延、部分不開示、不存在、又は「その他」区分で処理された場合、次の争点をどう組むべきか。</li>
+      <li>公用パソコンの使用実態を理由として、行政情報性だけでなく、公物管理・情報セキュリティ・職務専念義務の論点も併せて主張すべきか。</li>
+    </ol>
+    <div class="caution">
+      注意：このページは論点整理資料です。根拠資料の現物、条例文、開示決定通知、録音反訳等を確認したうえで、最終文案に反映する必要があります。
+    </div>
+  </section>
+
+  <section>
+    <h2>9. 要約</h2>
+    <div class="pill-row">
+      <div class="pill">公用PC私的利用禁止</div>
+      <div class="pill">PTA文書の形式だけでは判断不可</div>
+      <div class="pill">実態確認が必要</div>
+      <div class="pill">ログ・保存先・共有状況が重要</div>
+      <div class="pill">後日資料追加提出</div>
+    </div>
+  </section>
+
+  <div class="footer">
+    PTA適正化推進委員会｜論点整理資料
+  </div>
+
+</main>
+</body>
+</html>
